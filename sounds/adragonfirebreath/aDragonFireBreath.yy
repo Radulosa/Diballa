@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"aDragonFireBreath",
+  "audioGroupId":{
+    "name":"soundEffects",
+    "path":"audiogroups/soundEffects",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":5.25,
+  "name":"aDragonFireBreath",
+  "parent":{
+    "name":"Dragon",
+    "path":"folders/Sounds/Dragon.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"aDragonFireBreath.wav",
+  "type":1,
+  "volume":0.36,
+}

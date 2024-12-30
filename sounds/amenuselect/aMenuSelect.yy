@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"aMenuSelect",
+  "audioGroupId":{
+    "name":"soundEffects",
+    "path":"audiogroups/soundEffects",
+  },
+  "bitDepth":1,
+  "bitRate":320,
+  "compression":1,
+  "conversionMode":0,
+  "duration":0.3872,
+  "name":"aMenuSelect",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":48000,
+  "soundFile":"aMenuSelect",
+  "type":1,
+  "volume":0.25,
+}

@@ -1,0 +1,18 @@
+{
+  "$GMPath":"",
+  "%Name":"pDown",
+  "closed":true,
+  "kind":1,
+  "name":"pDown",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
+  },
+  "points":[
+    {"speed":45.0,"x":0.0,"y":0.0,},
+    {"speed":0.0,"x":0.0,"y":0.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

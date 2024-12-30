@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"aVolcano",
+  "audioGroupId":{
+    "name":"soundEffects",
+    "path":"audiogroups/soundEffects",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":5.538458,
+  "name":"aVolcano",
+  "parent":{
+    "name":"Power-ups",
+    "path":"folders/Sounds/Power-ups.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"aVolcano.wav",
+  "type":1,
+  "volume":0.69,
+}

@@ -1,0 +1,2 @@
+oHome.Lives +=1
+

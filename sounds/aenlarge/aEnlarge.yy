@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"aEnlarge",
+  "audioGroupId":{
+    "name":"soundEffects",
+    "path":"audiogroups/soundEffects",
+  },
+  "bitDepth":1,
+  "bitRate":320,
+  "compression":1,
+  "conversionMode":0,
+  "duration":5.991859,
+  "name":"aEnlarge",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":48000,
+  "soundFile":"aEnlarge.wav",
+  "type":1,
+  "volume":0.55,
+}

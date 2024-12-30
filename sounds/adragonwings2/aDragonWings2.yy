@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"aDragonWings2",
+  "audioGroupId":{
+    "name":"soundEffects",
+    "path":"audiogroups/soundEffects",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":3.0,
+  "name":"aDragonWings2",
+  "parent":{
+    "name":"Dragon",
+    "path":"folders/Sounds/Dragon.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"aDragonWings2.wav",
+  "type":1,
+  "volume":0.2,
+}

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"aEngage",
+  "audioGroupId":{
+    "name":"soundEffects",
+    "path":"audiogroups/soundEffects",
+  },
+  "bitDepth":1,
+  "bitRate":320,
+  "compression":1,
+  "conversionMode":0,
+  "duration":2.972154,
+  "name":"aEngage",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":48000,
+  "soundFile":"aEngage.wav",
+  "type":1,
+  "volume":0.33,
+}

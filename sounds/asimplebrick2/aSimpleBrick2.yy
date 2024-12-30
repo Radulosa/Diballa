@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"aSimpleBrick2",
+  "audioGroupId":{
+    "name":"soundEffects",
+    "path":"audiogroups/soundEffects",
+  },
+  "bitDepth":1,
+  "bitRate":320,
+  "compression":1,
+  "conversionMode":0,
+  "duration":0.696,
+  "name":"aSimpleBrick2",
+  "parent":{
+    "name":"SimpleBrick",
+    "path":"folders/Sounds/SimpleBrick.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"aSimpleBrick2",
+  "type":1,
+  "volume":0.4,
+}

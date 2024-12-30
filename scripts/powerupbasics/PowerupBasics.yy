@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"PowerupBasics",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PowerupBasics",
+  "parent":{
+    "name":"PowerUpGrow",
+    "path":"folders/Scripts/PowerUpGrow.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

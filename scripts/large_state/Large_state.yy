@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Large_state",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Large_state",
+  "parent":{
+    "name":"PowerUpGrow",
+    "path":"folders/Scripts/PowerUpGrow.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

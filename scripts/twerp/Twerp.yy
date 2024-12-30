@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Twerp",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Twerp",
+  "parent":{
+    "name":"Useful",
+    "path":"folders/Scripts/Useful.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Bounce",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Bounce",
+  "parent":{
+    "name":"Useful",
+    "path":"folders/Scripts/Useful.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
