@@ -1,7 +1,7 @@
-if (oHome.gold >= cost) {
-    oHome.gold -= cost;
+if (oHome.gold >= card_cost) {
+    oHome.gold -= card_cost;
     // Apply card effect based on card type
-    switch (type) {
+    switch (card_name) {
         case "Attack Boost": 
             // Example effect
             break;
@@ -9,7 +9,8 @@ if (oHome.gold >= cost) {
             // Example effect
             break;
         case "Gold Bonus":
-            oHome.gold += 50;
+            oHome.gold += 50 + irandom_range(10,20);
+			
             break;
     }
     next_level();

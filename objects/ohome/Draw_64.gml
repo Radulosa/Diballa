@@ -3,7 +3,13 @@ if global.Game_start {
 //Game needed display
 
 if room == room11 {
-	display_set_gui_size(room_width,room_height)}
+	display_set_gui_size(room_width,room_height)
+	var bricks = instance_number(oBrick)
+	if bricks <= 0 && global.Game_pause = false	{
+		show_cards(cards)
+		instance_create_layer(window_get_width()/2,window_get_height()/2,"UI",oPointer)
+	}
+}
 			
 	
 
@@ -20,6 +26,8 @@ if global.Game_pause = false {
 
 	draw_text_transformed_color(_x*0.03, _y,"SCORE: " + "\n" + string(Score),1.4,1.4,0,c_black,c_black,c_black,c_black,oPlayer.HideLeft*0.3);
 	draw_text_transformed_color(_x*0.03+5, _y + 5,"SCORE: " + "\n" + string(Score),1.4,1.4,0,c_white,c_white,c_white,c_white,oPlayer.HideLeft*1);
+	draw_text_transformed_color(_x*0.1, _y,"GOLD: " + "\n" + string(gold),1.4,1.4,0,c_black,c_black,c_black,c_black,oPlayer.HideLeft*0.3);
+	draw_text_transformed_color(_x*0.1+5, _y + 5,"GOLD: " + "\n" + string(gold),1.4,1.4,0,c_white,c_white,c_white,c_white,oPlayer.HideLeft*1);
 
 	
 

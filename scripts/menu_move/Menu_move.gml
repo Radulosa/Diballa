@@ -50,12 +50,12 @@ if UseKey {
 			
 			var _mouse_y_gui = oPointer.y	
 			var _dy = menu_y - buttonH/2 + 1
-		}
+		
 		
 		if _mouse_y_gui > _dy && _mouse_y_gui < menuSize {	
 				
 			menu_index =  (_mouse_y_gui - _dy) div buttonH
-
+		}
 			
 	if (menu_index != last_selected) audio_play_sound(aMenuSelect,1,false);
 	

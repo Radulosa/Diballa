@@ -1,11 +1,15 @@
 difficulty = 1  // Initial difficulty level
 gold = 100      // Player's starting gold
 special_chance = 5 // Chance of special level (in %)
-brick_rows = 5
+brick_rows = 1
 brick_columns = room_width / sprite_get_width(sBrick)
 current_level = 1
 brick_count = 0
-cards = ["Attack Boost", "Shield Boost", "Gold Bonus"] // Example cards
+cards = [
+    { name: "Gold Boost", type: "Gold Boost", cost: 10, sprite: sCardGold },
+    { name: "Health Boost", type: "Health Boost", cost: 15, sprite: sCardGold },
+    { name: "Attack Boost", type: "Attack Boost", cost: 20, sprite: sCardGold }
+];
 
 
 roomsLevel1 = ds_list_create()

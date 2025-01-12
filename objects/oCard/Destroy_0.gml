@@ -1,1 +1,2 @@
 instance_destroy(oPointer)
+instance_activate_object(oBall)

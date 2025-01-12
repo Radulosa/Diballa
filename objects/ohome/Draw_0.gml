@@ -153,3 +153,5 @@ draw_set_halign(fa_left)
 
 
 #endregion
+
+	draw_text_color(100,100,"Number of bricks " + string(instance_number(oBrick)),c_white,c_white,c_white,c_white,1)

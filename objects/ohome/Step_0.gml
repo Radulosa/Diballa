@@ -8,8 +8,6 @@ menu_y = room_height/2
 Gui_draw_x = room_width
 Gui_draw_y = (room_height * 0.1)
 
-
-
 if !keyboard_check(vk_alt) && keyboard_check_pressed(vk_enter) or mouse_check_button_pressed(mb_left) {
 	
 	if room == Menu {
@@ -201,34 +199,22 @@ alarm[1] = room_speed * 3
 Dead = false
 }
 
+if room == room11 {
+	var bricks = instance_number(oBrick)
+	if bricks <= 0 && global.Game_pause = false	{
+		instance_deactivate_object(oBall)
+	}
+}
+
 //Lose condition
 
 if Lives <= 0 {
-		oPlayer.keyLeft = 0
-	oPlayer.keyRight = 0
-	if keyboard_check(vk_anykey) {
-		Lives = 3
-		Score = 0
 		game_restart()
 	}
-	
-	if Score > Highscore Highscore = Score
-}
-
-	
 
 //Win condition
 
-RoomsMenu()
 
-if rooms == -1 {
-
-	var _Bricks = instance_number(oBrick)
-	if _Bricks <= 0 && NotPause = true 
-	{
-		
-	}
-}
 #endregion
 
 #region MUSIC (LOTS OF WORK TO BE DONE)

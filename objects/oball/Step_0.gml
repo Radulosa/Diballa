@@ -8,8 +8,8 @@
 
 if go == true {
 	
-x = oPlayer.x - 0.4
-y = oPlayer.y - 40
+x = oPlayer.x
+y = oPlayer.y - 180
 
 if global.Game_start {
 	
@@ -36,22 +36,22 @@ if go == false {
 
 if place_meeting(x,y+ySpeed,oPlaneSurface) {
 
-Surface = instance_place(x,y+ySpeed,oPlaneSurface)
+var surface = instance_place(x,y+ySpeed,oPlaneSurface)
 
-if Surface != noone {
+if surface != noone {
 	
-		while !place_meeting(x,y+sign(ySpeed),Surface) {
+		while !place_meeting(x,y+sign(ySpeed),surface) {
 		y+= sign(ySpeed)
 		}	
 
-	if x > Surface.x {
-	Angle = (x - Surface.x) / (Surface.sprite_width/2)
+	if x > surface.x {
+	Angle = (x - surface.x) / (surface.sprite_width/2)
 	xSpeed = Angle * AngleVar
 	
 	}
 
-	if x < Surface.x {
-	Angle = (x - Surface.x) / (Surface.sprite_width/2)
+	if x < surface.x {
+	Angle = (x - surface.x) / (surface.sprite_width/2)
 	xSpeed = Angle * AngleVar}
 		
 	ySpeed *= -1

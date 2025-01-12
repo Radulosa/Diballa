@@ -1,5 +1,9 @@
 draw_self()
 
+draw_text(900,830,string(image_index))
+draw_text(900,1030,string(sprite_index))
+draw_text(900,1050,string(currentState))
+
 if global.combining {
 	
 	var power_up_1 = global.power_ups[0].sprite;

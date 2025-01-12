@@ -2,42 +2,41 @@
 
 //Movement
 
-if global.Game_start {
+	if global.Game_start {
 
-if x <= oHome.Gui_draw_x * 0.15 HideLeft -= 0.1
-else HideLeft += 0.1
-if HideLeft <= 0 HideLeft = 0
-if HideLeft >= 1 HideLeft = 1
+	if x <= oHome.Gui_draw_x * 0.15 HideLeft -= 0.1
+	else HideLeft += 0.1
+	if HideLeft <= 0 HideLeft = 0
+	if HideLeft >= 1 HideLeft = 1
 
-if x >= oHome.Gui_draw_x * 0.85 HideRight -= 0.1
-else HideRight += 0.1
-if HideRight <= 0 HideRight = 0
-if HideRight >= 1 HideRight = 1
+	if x >= oHome.Gui_draw_x * 0.85 HideRight -= 0.1
+	else HideRight += 0.1
+	if HideRight <= 0 HideRight = 0
+	if HideRight >= 1 HideRight = 1
 
+	FSM();
 	
-if (image_index <= 11) hSpeed = 0 else {
+		// Check if the player is alive
+	if (is_alive) {
+	    // If the barrier doesn't exist, create it
+	    if (!instance_exists(barrier_instance)) {
+	        barrier_instance = instance_create_layer(x, y - 120, "Instances", oBarrier);
+	    }
 
-if StartSoundCount > 0 { 
-	audio_play_sound(aEngage,2,false)
-	StartSoundCount -= 1}
-	
-
-keyLeft = keyboard_check(ord("A")) or keyboard_check(vk_left) or mouse_check_button(mb_left)
-keyRight = keyboard_check(ord("D")) or keyboard_check(vk_right) or mouse_check_button(mb_right)
-
-hSpeed = ((keyRight-keyLeft) * Speed)
-
-if (place_meeting(x+hSpeed,y,oWallV)) {
-	while !place_meeting(x+sign(hSpeed),y,oWallV) {
-	x+= sign(hSpeed)
+	    // Synchronize the barrier position with the player
+	    if (instance_exists(barrier_instance)) {
+	        barrier_instance.x = x;
+	        barrier_instance.y = y - 120;
+	    }
+	} else {
+	    // Destroy the barrier if the player is not alive
+	    if (instance_exists(barrier_instance)) {
+	        instance_destroy(barrier_instance);
+	        barrier_instance = noone;
+	    }
 	}
-	hSpeed = 0
-}
 
-x+= hSpeed
 }
-}
-
 #endregion
 
 if (keyboard_check_pressed(vk_space) && array_length(global.power_ups) == 2 && !global.combining) {
@@ -145,45 +144,6 @@ camera_set_view_pos(view_camera[0],viewX + random_range(-_ShakeRange,_ShakeRange
 } else {
 	camera_set_view_pos(view_camera[0] ,viewX ,viewY)
 }}
-
-//Enlarge
-
-switch currentState {
-	
-    case states.Normal:
-        Normal_state();
-    break;
-
-    case states.Large:
-        Large_state();
-    break;
-
-    case states.Big:
-        Big_state();
-    break;
-	
-	 case states.Shrink:
-        Shrink_state();
-    break;
-}
-
-#endregion
-
-#region Movement Effect
-
-
-
-		
-if x < xprevious  {
-	
-		instance_create_depth(x + 10, y,301,oPlayerShadow)
-	}
-	
-	if x > xprevious  {
-		
-		instance_create_depth(x - 10, y,301,oPlayerShadow)
-	}
-	
 
 #endregion
 

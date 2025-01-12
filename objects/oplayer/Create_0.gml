@@ -1,8 +1,12 @@
+
+is_alive = true; // Track player state
+barrier_instance = noone; 
+
 hSpeed = 0
 Speed = 10
 Enlarge = false
 CurrentSprite = 0
-
+sprite_index = CurrentSprite
 
 global.combining = false
 global.power_ups = []
@@ -24,11 +28,49 @@ HideRight = 1
 x = room_width / 2
 y = room_height * 0.965
 
-State()
+// States
+enum PlayerState {
+    IDLE,
+    MOVE_LEFT,
+    MOVE_RIGHT,
+    DASH,
+	CASTBARRIER
+}
 
-currentState = states.Normal;
-CurrentSprite = sPaddle
+// Variables
+currentState = PlayerState.CASTBARRIER;
+dash_timer = 0;
+double_tap_timer = 0;
+double_tap_time_limit = 22;
+double_tap_key = 0;
 
-sprite_index = CurrentSprite
-image_xscale = 2
-image_yscale = 1.1
+// Movement
+move_speed = 4;
+dash_speed = 10;
+
+// Resources
+mana = 100;
+mana_cost_per_step =0.5;
+
+// Sprites
+sprite_idle = sMagus_FrontIdle;
+sprite_move_left = sMagus_LeftWalk;
+sprite_move_right = sMagus_RightWalk;
+sprite_dash = sMagus_Dash;
+
+// Initial sprite
+sprite_index = sprite_idle;
+
+// Wobble Effect
+wobble_frame_count = 0;
+wobble_magnitude = 1;
+original_scale_x = image_xscale * 1;
+original_scale_y = image_yscale * 1;
+
+
+
+
+
+
+
+

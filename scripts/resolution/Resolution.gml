@@ -17,9 +17,9 @@ function Resolution(){
 		var _height = min (_baseHeight, _displayHeight)
 		var _width = _height * _aspect
 		
-		}
-		
 		surface_resize(application_surface,_width,_height)
 		alarm[2] = 1
+		
+	}
 
 }

@@ -1,21 +1,39 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function show_cards(){
-	
-	var card_count = 3;
-	var card_width = 100;
-	var card_spacing = 20;
-	var x_start = (room_width - ((card_width + card_spacing) * card_count - card_spacing)) / 2;
-	var y_position = room_height / 2;
+function show_cards(cards) {
+    var card_spacing = 20; // Space between cards
+    var x_center = room_width / 2;
+    var y_center = room_height / 2;
 
-	for (var i = 0; i < card_count; i++) {
-	    var card = instance_create_layer(x_start + i * (card_width + card_spacing), y_position, "Cards", oCard);
-	    card.type = oHome.cards[i mod array_length(oHome.cards)];
-	    card.cost = 10 * oHome.difficulty; // Example cost scaling
-	}
+    var total_width = 0;
 
-	// Create a skip button
-	instance_create_layer(room_width / 2, y_position + 100, "UI", oButtonSkip);
+    // Calculate total width based on sprite dimensions
+    for (var i = 0; i < array_length(cards); i++) {
+        total_width += sprite_get_width(cards[i].sprite) + card_spacing;
+    }
+    total_width -= card_spacing; // Remove extra spacing after the last card
+    var x_start = x_center - (total_width / 2);
 
+    for (var i = 0; i < array_length(cards); i++) {
+        // Calculate card position
+        var sprite_w = sprite_get_width(cards[i].sprite);
+        var sprite_h = sprite_get_height(cards[i].sprite);
 
+        var card_x = x_start + (sprite_w / 2);
+        var card_y = y_center;
+
+        // Create an oCard instance
+        var card_instance = instance_create_layer(card_x, card_y, "Instances", oCard);
+
+        // Pass card data to the instance
+        card_instance.sprite_index = cards[i].sprite; // Assign sprite
+        card_instance.card_name = cards[i].name;      // Assign name
+        card_instance.card_cost = cards[i].cost;      // Assign cost
+
+        // Move to the next card position
+        x_start += sprite_w + card_spacing;
+    }
+
+    // Create the skip button
+    var skip_x = x_center;
+    var skip_y = y_center + (sprite_get_height(cards[0].sprite) / 2) + 50;
+    instance_create_layer(skip_x, skip_y, "Instances", oButtonSkip);
 }
